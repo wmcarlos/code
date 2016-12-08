@@ -1,6 +1,6 @@
 <?php 
-	require_once("helpers/helper_url.php");
-	$url = new helper_url();
+	require_once("models/model_helper.php");
+	$helper = new model_helper();
 	
 	include("header.php");
 	include("body.php");

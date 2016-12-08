@@ -1,3 +1,3 @@
 <?php
-	$url->load();
+	$helper->load();
 ?>
