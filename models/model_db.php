@@ -16,7 +16,7 @@
 			$this->port = "";
 			$this->user = "root";
 			$this->password = "123456";
-			$this->db = "market";
+			$this->db = "code";
 			$this->result = null;
 			$this->con = mysql_connect($this->server, $this->user, $this->password) or die ("Error al Conectar al Servidor ".mysql_error());
 
