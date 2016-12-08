@@ -1,5 +1,3 @@
-</div>
-
 <!--Javasscript Files-->
 <script type="text/javascript" src="views/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="views/plugins/DataTables-1.10.12/media/js/jquery.dataTables.min.js"></script>
