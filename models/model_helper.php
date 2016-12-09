@@ -81,15 +81,12 @@
  				$contm = 0;
 	 			while($modules[$contm]['module_id'] != null){
 	 				$menu.="<li class='dropdown'><a class='dropdown-toggle' data-toggle='dropdown' href='#'>".$modules[$contm]['name']." <span class='caret'></span></a> <ul class='dropdown-menu'>";
-
 	 					$services = $this->getservices($modules[$contm]['module_id']);
 	 					$conts = 0;
-
 	 					while($services[$conts]['service_id'] != null){
 	 						$menu.="<li><a href='?v=".$services[$conts]['url']."'>".$services[$conts]['name']."</a></li>";
 	 						$conts++;
 	 					}
-
 	 					$menu.="</ul></li>";
 	 				$contm++;
 	 			}
@@ -101,7 +98,6 @@
  		public function settitle($t){
  			$this->txtoperation = $_GET["txtoperation"];
  			$title = $t;
- 			
  			if(isset($this->txtoperation) and !empty($this->txtoperation)){
  				switch ($this->txtoperation) {
  					case 'new':
@@ -114,7 +110,6 @@
  					break;
  				}
  			}
-
  			return $title;
  		}
  	}
