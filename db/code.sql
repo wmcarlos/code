@@ -47,13 +47,13 @@ create table cd_user(
 
 create table cd_access(
 	access_id int auto_increment not null,
-	user_id int not null,
 	role int not null,
+	service_id int not null,
 	created timestamp not null default current_timestamp,
 	updated timestamp null,
 	isactive char(1) not null default 'Y',
 	constraint pk_access_id primary key (access_id),
-	constraint fk_user_id foreign key (user_id) references cd_user (user_id) on update cascade on delete restrict
+	constraint fk_service_id foreign key (service_id) references cd_service (service_id) on update cascade on delete restrict
 )engine = InnoDB;
 
 create table cd_code(
