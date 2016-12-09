@@ -42,9 +42,11 @@
 		}
 
 		public function search($data){
-			$t = strtolower($data["type"]);
-			$sql = "";
+			$type = $data["type"];
 			
+			$t = strtolower($type);
+			$sql = "";
+
 			switch ($t) {
 				case 'login':
 					$this->password = md5($this->password);

@@ -6,13 +6,12 @@
 
 	$user->username = $_POST["txtusername"];
 	$user->password = $_POST["txtpassword"];
-
 	$txtoperation = $_REQUEST["txtoperation"];
 
 	switch ($txtoperation) {
 	 	case "login":
-	 		$data["type"] = "login";
-	 		$arruser = $user->search($data["type"]);
+	 		$data['type'] = "login";
+	 		$arruser = $user->search($data);
 
 	 		if( count($arruser) > 0 ){
 	 			$_SESSION["username"] = $arruser[0]["username"];
@@ -28,5 +27,5 @@
 	 		session_destroy();
 	 		header("location: index.php?v=login&logout=yes");
 	 	break;
-	 } 
+	 }
 ?>
