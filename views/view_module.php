@@ -26,7 +26,7 @@
 					<a href="?v=module&txtoperation=new" class="btn btn-success"><i class="fa fa-plus"></i> New</a>
 					<br>
 					<br>
-					<table class="table table-bordered table-striped">
+					<table class="table table-bordered table-striped datatable">
 						<thead>
 							<th>ID</th>
 							<th>Name</th>
@@ -34,10 +34,9 @@
 							<th>-</th>
 						</thead>
 						<tbody>
-							
+							<?php print $cad; ?>
 						</tbody>
 					</table>
-
 				<?php }?>
 			</div>
 	</div>

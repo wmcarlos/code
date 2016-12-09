@@ -17,14 +17,17 @@
 			$data["type"] = "all";
 			$all = $module->search($data);
 			$cont = 0;
+			$cad = "";
 
 			while($all[$cont]["module_id"] != null){
-
-
-
+				$cad.= "<tr>";
+					$cad.="<td>".$all[$cont]['module_id']."</td>";
+					$cad.="<td>".$all[$cont]['name']."</td>";
+					$cad.="<td>".$all[$cont]['position']."</td>";
+					$cad.="<td></td>";
+				$cad.="</tr>";
 				$cont++;
 			}
-
 		break;
 	}
 ?>

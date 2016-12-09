@@ -5,5 +5,10 @@
 <script type="text/javascript" src="views/js/bootbox.min.js"></script>
 <script type="text/javascript" src="views/js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="views/js/additional-methods.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $('.datatable').DataTable();
+	});
+</script>
 </body>
 </html>
