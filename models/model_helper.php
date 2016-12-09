@@ -19,6 +19,5 @@
  				include("views/view_dashboard.php");
  			}
  		}
- 		
  	}
 ?>
