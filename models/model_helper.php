@@ -1,6 +1,9 @@
 <?php
 	require_once("models/model_db.php"); 
  	class model_helper extends model_db{
+ 		
+ 		public $txtoperation;
+
 
  		public function load(){
  			$v = $_GET['v'];
@@ -93,6 +96,26 @@
 	 			$menu.="<li><a href='?v=login&txtoperation=logout'>Logout</a></li>";
  			}
  			return $menu;
+ 		}
+
+ 		public function settitle($t){
+ 			$this->txtoperation = $_GET["txtoperation"];
+ 			$title = $t;
+ 			
+ 			if(isset($this->txtoperation) and !empty($this->txtoperation)){
+ 				switch ($this->txtoperation) {
+ 					case 'new':
+ 						$this->txtoperation = "add";
+ 						$title = "New ".$title;
+ 					break;
+ 					case "search":
+ 						$this->txtoperation = "edit";
+ 						$title = "Edit ".$title;
+ 					break;
+ 				}
+ 			}
+
+ 			return $title;
  		}
  	}
 ?>
