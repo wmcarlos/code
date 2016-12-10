@@ -28,6 +28,10 @@
 			return $this->$atr;
 		}
 
+		public function add(){
+			return $this->execute("insert into cd_module (created, name, position, icon_class) values (now(), '$this->name',$this->position, '$this->icon_class')");
+		}
+
 		public function search($data){
 			$type = strtolower($data['type']);
 			$sql = "";
@@ -38,6 +42,9 @@
 				break;
 				case 'single':
 					$sql = "select * from cd_module where module_id = $this->module_id";
+				break;
+				case "byname":
+					$sql = "select * from cd_module where name = '$this->name'";
 				break;
 			}
 

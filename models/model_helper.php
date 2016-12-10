@@ -112,5 +112,16 @@
  			}
  			return $title;
  		}
+
+ 		public function getbuttons($ia, $vw, $id){
+ 			$ia = strtoupper($ia);
+ 			$buttons = "";
+ 			if($ia == "Y"){
+ 				$buttons = "<a class='btn btn-info' href='?v=".$vw."&txtoperation=search&txt".$vw."_id=".$id."'><i class='fa fa-pencil'></i> Edit</a> <button class='btn btn-danger' name='btndesactivate' id='btndesactivate'><i class='fa fa-remove'></i> Desactivate</button>";
+ 			}else if ($ia == "N"){
+ 				$buttons = "<button class='btn btn-success' name='btnactivate' id='btnactivate'><i class='fa fa-check'></i> Activate</button>";
+ 			}
+ 			return $buttons;
+ 		}
  	}
 ?>

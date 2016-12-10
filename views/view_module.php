@@ -6,17 +6,18 @@
 					if ($helper->txtoperation == "add" or $helper->txtoperation == "edit"){
 				?>
 						<form name="fmodule" id="fmodule" method="post" action="?v=module">
+						<input type="hidden" name="txtmodule_id" id="txtmodule_id" value="<?php print $txtmodule_id?>">
 						<div class="form-group">
 							<label for="txtname">Name: </label>
-							<input type="text" name="txtname" id="txtname" placeholder="Enter Name" class="form-control"/>
+							<input type="text" name="txtname" id="txtname" placeholder="Enter Name" class="form-control" value="<?php print $txtname; ?>"/>
 						</div>
 						<div class="form-group">
 							<label for="txticon_class">Icon Class: </label>
-							<input type="text" name="txticon_class" id="txticon_class" placeholder="Enter Icon Class" class="form-control">
+							<input type="text" name="txticon_class" id="txticon_class" placeholder="Enter Icon Class" class="form-control" value="<?php print $txticon_class; ?>">
 						</div>
 						<div class="form-group">
 							<label for="txtposition">Position: </label>
-							<input type="text" name="txtposition" id="txtposition" placeholder="Enter Position" class="form-control">
+							<input type="text" name="txtposition" id="txtposition" placeholder="Enter Position" class="form-control" value="<?php print $txtposition; ?>">
 						</div>
 						<input type="hidden" name="txtoperation" id="txtoperation" value="<?php print $helper->txtoperation; ?>"/>
 						<button class="btn btn-success" name="btnsave" id="btnsave" type="submit"><i class="fa fa-floppy-o"></i> Save</button>
