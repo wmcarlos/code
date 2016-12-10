@@ -5,7 +5,7 @@
 				<?php
 					if ($helper->txtoperation == "add" or $helper->txtoperation == "edit"){
 				?>
-						<form name="fmodule" id="fmodule" method="post" action="?v=module">
+						<form name="fmodule" autocomplete="off" id="fmodule" method="post" action="?v=module">
 						<input type="hidden" name="txtmodule_id" id="txtmodule_id" value="<?php print $txtmodule_id?>">
 						<div class="form-group">
 							<label for="txtname">Name: </label>
